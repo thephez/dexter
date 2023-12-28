@@ -4,6 +4,8 @@ from dexter.service   import Service, Handler, Result
 from dexter.core.log  import LOG
 from dexter.core.util import get_pygame, fuzzy_list_range, to_alphanumeric
 
+from playsound import playsound
+
 _KEY_ACTION_PHRASES = (
     # Add phrases and corresponding keyboard actions here
     ("Copy that", "ctrl+c", False),
@@ -57,7 +59,10 @@ class KeyboardActionService(Service):
                 start, end, score = fuzzy_list_range(words, phrase)
                 if start == 0 and (not is_prefix or end == len(phrase)):
                     self._execute_key_action(key_action)
-                    return _KeyboardActionHandler(self, tokens, f"Executed {key_action}", self._belief)
+                    # return _KeyboardActionHandler(self, tokens, f"Executed {key_action}", self._belief)
+                    # Don't speak a reply for successful actions, but play a sound instead
+                    playsound('sounds/keystroke-success.ogg')
+                    return _KeyboardActionHandler(self, tokens, None, self._belief)
             except ValueError as e:
                 continue
         return None

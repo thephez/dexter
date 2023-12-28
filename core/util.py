@@ -419,6 +419,7 @@ _HOMOPHONES = {
     'pain'       : ('pane',        False),
     'pair'       : ('pear',        True ),
     'passed'     : ('past',        False),
+    'paced'      : ('paste',       False),
     'peace'      : ('piece',       False),
     'peak'       : ('peek',        True ),
     'pear'       : ('pair',        True ),

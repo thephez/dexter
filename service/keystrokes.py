@@ -25,6 +25,8 @@ _KEY_ACTION_PHRASES = (
     ("Open Slack", "ctrl+alt+shift+s", False),
     ("Next application", "alt+tab", False),
     ("Last application", "alt+shift+tab", False),
+    ("Next window", "alt+`", False),
+    ("Last window", "alt+shift+`", False),
     ("Press escape key", "esc", False),
     ("Move up", "up", False),
     ("Move down", "down", False),
@@ -41,7 +43,7 @@ class _KeyboardActionHandler(Handler):
         return Result(self, self._reply, True, False)
 
 class KeyboardActionService(Service):
-    def __init__(self, state, belief=0.75):
+    def __init__(self, state, belief=0.80):
         super().__init__("KeyboardAction", state)
         self._belief = float(belief)
         self._key_action_phrases = [
@@ -65,6 +67,7 @@ class KeyboardActionService(Service):
                     return _KeyboardActionHandler(self, tokens, None, self._belief)
             except ValueError as e:
                 continue
+        # playsound('sounds/keystroke-failure.ogg')
         return None
 
     def _execute_key_action(self, key_action):

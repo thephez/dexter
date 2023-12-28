@@ -51,7 +51,10 @@
             }],
 
             [ "dexter.service.randomness.RandomService", {
-            }]
+            }],
+
+            [ "dexter.service.keystrokes.KeyboardActionService", {
+            }],
         ]
     }
 }

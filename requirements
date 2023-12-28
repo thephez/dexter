@@ -133,6 +133,7 @@ pip install PyDictionary
 pip install python-kasa
 pip install blink1
 pip install blinkstick pyusb
+pip install pyautogui
 
 # Ubuntu has this, Raspbian does not, so try both locations.
 sudo apt install -y python3-levenshtein || pip install python-Levenshtein

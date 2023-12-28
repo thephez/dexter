@@ -1,4 +1,4 @@
-import pyautogui  # Ensure this library is installed
+import pyautogui
 
 from dexter.service   import Service, Handler, Result
 from dexter.core.log  import LOG

@@ -8,6 +8,7 @@
  */
 {
     "key_phrases" : [
+        "Alexa",
         "Dexter",
         "Hey Computer"
     ],
@@ -34,24 +35,24 @@
         ],
 
         "services" : [
-            [ "dexter.service.chronos.ClockService", {
-            }],
+            // [ "dexter.service.chronos.ClockService", {
+            // }],
 
-            [ "dexter.service.chronos.TimerService", {
-            }],
+            // [ "dexter.service.chronos.TimerService", {
+            // }],
 
-            [ "dexter.service.volume.VolumeService", {
-            }],
+            // [ "dexter.service.volume.VolumeService", {
+            // }],
 
-            [ "dexter.service.wikiquery.WikipediaService", {
-            }],
+            // [ "dexter.service.wikiquery.WikipediaService", {
+            // }],
 
-            [ "dexter.service.music.LocalMusicService", {
-                "dirname" : "${HOME}/Music"
-            }],
+            // [ "dexter.service.music.LocalMusicService", {
+            //     "dirname" : "${HOME}/Music/Avicii"
+            // }],
 
-            [ "dexter.service.randomness.RandomService", {
-            }],
+            // [ "dexter.service.randomness.RandomService", {
+            // }],
 
             [ "dexter.service.keystrokes.KeyboardActionService", {
             }],

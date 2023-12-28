@@ -8,9 +8,21 @@ _KEY_ACTION_PHRASES = (
     # Add phrases and corresponding keyboard actions here
     ("Copy that", "ctrl+c", False),
     ("Paste that", "ctrl+v", False),
+    ("Copy from terminal", "ctrl+shift+c", False),
+    ("Paste to terminal", "ctrl+shift+v", False),
     ("Refresh", "f5", False),
     ("Open terminal", "ctrl+alt+t", False),
-    # You can add more phrases and actions as needed
+    ("Show applications", "win", False),
+    ("Show notifications", "win+m", False),
+    ("Open Chrome", "win+6", False),
+    ("Open Thunderbird", "win+7", False),
+    ("Next application", "alt+tab", False),
+    ("Last application", "alt+shift+tab", False),
+    ("Press escape key", "esc", False),
+    ("Move up", "up", False),
+    ("Move down", "down", False),
+    ("Page up", "pageup", False),
+    ("Page down", "pagedown", False),
 )
 
 class _KeyboardActionHandler(Handler):
@@ -47,7 +59,3 @@ class KeyboardActionService(Service):
 
     def _execute_key_action(self, key_action):
         pyautogui.hotkey(*key_action.split('+'))
-
-# ... [Rest of your code or additional functionalities] ...
-
-# When using the service, you will create an instance of KeyboardActionService

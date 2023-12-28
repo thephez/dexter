@@ -4,7 +4,7 @@ from dexter.service   import Service, Handler, Result
 from dexter.core.log  import LOG
 from dexter.core.util import get_pygame, fuzzy_list_range, to_alphanumeric
 
-from playsound import playsound
+# from playsound import playsound
 
 _KEY_ACTION_PHRASES_DICT = {
     "Copy that": ("ctrl+c", False),
